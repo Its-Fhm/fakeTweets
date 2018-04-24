@@ -3,7 +3,7 @@ const fs = require('fs');
 class Users {
     static getUsers () {
         try {
-            const data = fs.readFileSync('../data/user.txt', 'utf8');
+            const data = fs.readFileSync('./data/user.txt', 'utf8');
 
             let splitted = data.toString().split(" follows ");
             let losers = splitted.toString().split("\r\n");

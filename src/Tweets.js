@@ -3,7 +3,7 @@ const fs = require('fs');
 class Tweets {
     static getTweets () {
         try {
-            const data = fs.readFileSync('../data/tweet.txt', 'utf8');
+            const data = fs.readFileSync('./data/tweet.txt', 'utf8');
 
             let rawTweets = data.replace(/>/gi, ':').split("\n").splice(0,3);
             let tweetsArr = rawTweets.map(function(e) { return '@' + e});
